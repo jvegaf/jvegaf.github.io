@@ -91,7 +91,7 @@ Primero de todo tenemos que tener docker arrancado. En windows lo sabemos porque
 Lo siguiente es que desde la terminal necesitamos hacer login en docker con nuestro usuario previamente creado. Eso lo logramos con:
 
  
-```Bash
+```shell
 $> docker login
 ```
  
@@ -103,7 +103,7 @@ Login success.
  
 Como lo que necesitamos es arrancar directamente el contenedor con la imagen que hemos seleccionado, sin más, con este simple comando ejecutamos por primera vez el contenedor, obligando a docker a que automáticamente descargue la imagen y arranque el contenedor.
 
-```
+```shell
 docker run -d -p 49160:22 -p 49161:80 -p 49162:3306 wnameless/mysql-phpmyadmin
 ```
 
@@ -123,7 +123,7 @@ Y tendremos un bonito terminal de SSH a la máquina
 
 Para listar los contenedores que tienes arrancados en tu maquina, tienes el comando
 
-```
+```shell
 $> docker ps
 ```
 
@@ -131,7 +131,7 @@ $> docker ps
 
 Puedes pararlo con
 
-```
+```shell
 $> docker stop [container ID]
 ```
 
@@ -139,7 +139,7 @@ Si solo quieres salirte del contenedor sin pararlo puedes hacerlo con la combina
 
 Para listar todos los contenedores que tengas en tu maquina aunque estén parados lo hacemos con
 
-```
+```shell
 $> docker ps -a
 ```
 
@@ -147,13 +147,13 @@ $> docker ps -a
 
 Para volver a arrancar un contenedor que tengamos parado usamos:
 
-```
+```shell
 $> docker start [container id]
 ``` 
 
 Esto es lo minimo que tienes que conocer de docker para poder empezar a usarlo. Tienes muchas cosas mas, asi que si quieres puedes bucear por internet o usar la ayuda de docker, que la invocas con:
 
-```
+```shell
 $> docker [nombre del comando] --help
 ``` 
 
