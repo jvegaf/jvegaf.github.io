@@ -11,7 +11,7 @@ title: Instalacion Freeplane en Ubuntu y derivados
 
 La manera mas sencilla de instalacion de Freeplane es mediante el gestor de paquetes Snappy.
 
-Antiguamente, la principal manera de instalación de aplicaciones ó paquetes en Debian y derivadas era a traves del repositorio APT. Pero en 2016 Canonical liberó un nuevo gestor de paquetes llamado Snappy, cuya "mejora" es que te incluye las dependencias de la aplicacion dentro del mismo paquete. A mi modo de ver, tiene los pros de que si estas trabajando con una libreria antigua, no vas a tener problemas de compatibilidad con sistemas nuevos, pero, como contra le veo que puedes llegar a tener N veces la misma libreria en tu disco.
+Antiguamente, la principal manera de instalación de aplicaciones|paquetes en Debian y derivadas era a traves del repositorio APT. Pero en 2016 Canonical liberó un nuevo gestor de paquetes llamado Snappy, cuya "mejora" es que te incluye las dependencias de la aplicacion dentro del mismo paquete. A mi modo de ver, tiene los pros de que si estas trabajando con una libreria antigua, no vas a tener problemas de compatibilidad con sistemas nuevos, pero, como contra le veo que puedes llegar a tener N veces la misma libreria en tu disco.
 
 ## Instalacion Snappy
 
