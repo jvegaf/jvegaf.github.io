@@ -2,21 +2,11 @@
 layout: default
 ---
 
-<div class="container">
-  <!-- begin page -->
-  <article class="page">
+<article class="page">
 
-    <div class="page__head" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="700">
-      <h1 class="page__title">{{ page.title | escape }}</h1>
-      {% if page.image %}
-      <div class="page-image" style="background-image: url({{site.baseurl}}{{page.image}})"></div>
-      {% endif %}
-    </div>
+  <h1>{{ page.title }}</h1>
 
-    <div class="page__content" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-delay="100" data-aos-duration="700">
+  <div class="entry">
     {{ content }}
-    </div>
-
-  </article>
-  <!-- end page -->
-</div>
+  </div>
+</article>
