@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Entorno minino PHP
+title: Entorno minimo PHP
 ---
 
 ![php]({{ site.baseurl}}/images/2019-11-24-entorno-minimo-php/img_2.png)
@@ -32,20 +32,18 @@ Buceando un poco por Github, he dado con un [proyecto](https://github.com/ionut-
 
 lo primero que necesitamos es abrir un terminal y posicionarnos en el directorio que hayamos elegido para trabajar. Una vez estemos en el directorio, tenemos que clonarnos el proyecto, con:
 
-´´´shell
-  $> git clone https://github.com/jvegaf/docker-nginx-php-xdebug.git
-´´´
+```shell
+$> git clone https://github.com/jvegaf/docker-nginx-php-xdebug.git
+```
 
 ![clonado]({{ site.baseurl}}/images/2019-11-24-entorno-minimo-php/img_1.png)
 
 Cuando termine de clonarse el proyecto, nos posicionamos dentro de la carpeta **docker-nginx-php-xdebug** y descubrimos que tenemos un fichero Dockerfile en el cual tenemos lo siguiente
 
-´´´
+```
 FROM php:7.2-fpm 
-
 RUN pecl install xdebug-2.6.0RC2 && docker-php-ext-enable xdebug
-
-´´
+```
 
 en el FROM le indicamos la imagen base que queremos tener del interprete de PHP. Una vez descargada la imagen del repo de dockerhub, ejecutaremos las instrucciones que vengan en RUN, que es instalar los paquetes necesarios de XDEBUG. Simple y sencillo como el mecanismo de un botijo.
 
@@ -53,7 +51,8 @@ en el FROM le indicamos la imagen base que queremos tener del interprete de PHP.
 
 y vamos a ver que tiene dentro
 
-´´´
+```shell
+
 version: "2"
 
 services:
@@ -85,7 +84,8 @@ services:
 networks:
     php-network:
         driver: bridge
-´´´
+
+```
 
 Bien, vayamos por partes como dijo *Jack the ripper*. Vemos que queremos levantar dos servicios, uno llamado web que tiene un nginx en el cual he re-mapeado el puerto de salida por el 8100 dado que si tenemos el puerto 80 ocupado por algun apache en nuestra maquina, podemos dejarle que siga escuchando en ese puerto y nuestro nginx puede escuchar perfectamente en otro lado.
 
@@ -110,14 +110,14 @@ Y por esta parte nada mas. Ya solo queda un solo comando de terminal para levant
 
 Tan sencillo como escribir en el terminal
 
-´´´shell
+```shell
 $> docker-compose up -d 
-´´´´
+```
 si estas en windows o mac, o en caso de estar en GNU Linux, y haber instalado docker con Snappy
 
-´´´shell
+```shell
 $> sudo docker-compose up -d
-´´´
+```
 
 en caso de que quisieramos ver los logs quitamos el flag -d y se pondrá que da gusto escupiendo logs. En mi caso, como de momento no le veo mucho sentido, le pongo el flag -d y asi me devuelve rapidamente el control de ese terminal para poder seguir usandolo.
 
@@ -125,9 +125,9 @@ en caso de que quisieramos ver los logs quitamos el flag -d y se pondrá que da 
 
 Tan facil como poner en esa terminal dentro del directorio del proyecto
 
-´´´shell
+```shell
 $> docker-compose down
-´´´
+```
 o con el sudo delante pa que no se espante en GNU Linux.
 
 
