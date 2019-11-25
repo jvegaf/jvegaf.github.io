@@ -22,7 +22,7 @@ docker-compose.yml
 
 En el vamos a escribir lo siguiente en caso de Windows o Mac
 
-```
+```YAML
 version: '2'
 services:
   webserver:
@@ -37,7 +37,7 @@ services:
 
 o en caso de usar GNU Linux cambiamos un pelín, dado que no tenemos disponble el puerto host.docker.internal
 
-```
+```YAMl
 version: '2'
 services:
   webserver:
@@ -48,7 +48,7 @@ services:
       - ./:/var/www/html
     environment:
       XDEBUG_CONFIG: remote_host=<hostname>
-´´´
+```
 
 poniendo como hostname el nombre que le tienes puesto en tu máquina. Por ejemplo en mi caso,
 seria *fsociety* . Para averiguar el nombre de tu máquina solo tienes que poner en el terminal hostname y te escupira el nombre
